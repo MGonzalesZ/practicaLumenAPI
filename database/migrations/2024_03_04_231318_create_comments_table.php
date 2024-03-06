@@ -17,6 +17,10 @@ return new class extends Migration
             $table->date('creation_date', 20);
             $table->date('publishing_date', 20);
             $table->boolean('published');
+            $table->unsignedInteger('content_id')->nullable();
+            $table->foreign('content_id')->references('id')->on('contents')->onDelete('cascade');
+            $table->unsignedInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

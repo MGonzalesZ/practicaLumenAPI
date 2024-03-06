@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('alias', 180);
             $table->string('author', 60);
             $table->string('image_url', 255);
-            $table->string('introduction', 300);
+            $table->string('introduction', 500);
             $table->text('body');
-            $table->string('tags', 300);
+            $table->string('tags', 500);
             $table->enum('format', ['ONLY_TEXT', 'WITH_IMAGE', 'WITH_GALLERY', 'WITH_VIDEO']);
             $table->boolean('featured');
             $table->enum('status', ['WRITING', 'PUBLISHED', 'NOT_PUBLISHED', 'ARCHIVED']);
