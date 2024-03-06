@@ -15,7 +15,7 @@ class Comment extends Model
      * @var string[]
      */
     protected $fillable = [
-        'text', 'creation_date', 'publishing_date', 'published', 'content_id', 'user_id'
+        'text', 'creation_date', 'publishing_date', 'published', 'content_id', 'user_id', 'created_at', 'updated_at', 'created_by', 'updated_by'
     ];
 
     /**

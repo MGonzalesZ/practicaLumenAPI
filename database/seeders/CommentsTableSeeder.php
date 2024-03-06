@@ -18,13 +18,13 @@ class CommentsTableSeeder extends Seeder
         DB::table('comments')->truncate();
 
         // Agrega datos de ejemplo
-        DB::table('comments')->insert(['text' => 'Me parece muy bien', 'creation_date' => '2024-03-05', 'publishing_date' => '2024-03-05', 'published' => true, 'content_id' => 1, 'user_id' => 1]);
-        DB::table('comments')->insert(['text' => 'No estoy de acuerdo', 'creation_date' => '2024-03-04', 'publishing_date' => '2024-03-04', 'published' => true, 'content_id' => 1, 'user_id' => 1]);
-        DB::table('comments')->insert(['text' => 'Perfecto!', 'creation_date' => '2024-03-03', 'publishing_date' => '2024-03-03', 'published' => true, 'content_id' => 1, 'user_id' => 1]);
-        DB::table('comments')->insert(['text' => 'Me parece que el titular no es el correcto', 'creation_date' => '2024-03-04', 'publishing_date' => '2024-03-04', 'published' => true, 'content_id' => 2, 'user_id' => 1]);
-        DB::table('comments')->insert(['text' => 'Sí, claro. Como no!', 'creation_date' => '2024-03-05', 'publishing_date' => '2024-03-05', 'published' => true, 'content_id' => 2, 'user_id' => 1]);
-        DB::table('comments')->insert(['text' => 'No estoy nada de acuerdo', 'creation_date' => '2024-03-05', 'publishing_date' => '2024-03-05', 'published' => true, 'content_id' => 2, 'user_id' => 1]);
-        DB::table('comments')->insert(['text' => 'Por favor ya no publiquen temas asi', 'creation_date' => '2024-03-05', 'publishing_date' => '2024-03-05', 'published' => true, 'content_id' => 3, 'user_id' => 1]);
-        DB::table('comments')->insert(['text' => 'A nadie le importa', 'creation_date' => '2024-03-05', 'publishing_date' => '2024-03-05', 'published' => true, 'content_id' => 3, 'user_id' => 1]);
+        Comment::create(['text' => 'Me parece muy bien', 'creation_date' => '2024-03-05', 'publishing_date' => '2024-03-05', 'published' => true, 'content_id' => 1, 'user_id' => 1, 'created_by' => 'seeder']);
+        Comment::create(['text' => 'No estoy de acuerdo', 'creation_date' => '2024-03-04', 'publishing_date' => '2024-03-04', 'published' => true, 'content_id' => 1, 'user_id' => 1, 'created_by' => 'seeder']);
+        Comment::create(['text' => 'Perfecto!', 'creation_date' => '2024-03-03', 'publishing_date' => '2024-03-03', 'published' => true, 'content_id' => 1, 'user_id' => 1, 'created_by' => 'seeder']);
+        Comment::create(['text' => 'Me parece que el titular no es el correcto', 'creation_date' => '2024-03-04', 'publishing_date' => '2024-03-04', 'published' => true, 'content_id' => 2, 'user_id' => 1, 'created_by' => 'seeder']);
+        Comment::create(['text' => 'Sí, claro. Como no!', 'creation_date' => '2024-03-05', 'publishing_date' => '2024-03-05', 'published' => true, 'content_id' => 2, 'user_id' => 1, 'created_by' => 'seeder']);
+        Comment::create(['text' => 'No estoy nada de acuerdo', 'creation_date' => '2024-03-05', 'publishing_date' => '2024-03-05', 'published' => true, 'content_id' => 2, 'user_id' => 1, 'created_by' => 'seeder']);
+        Comment::create(['text' => 'Por favor ya no publiquen temas asi', 'creation_date' => '2024-03-05', 'publishing_date' => '2024-03-05', 'published' => true, 'content_id' => 3, 'user_id' => 1, 'created_by' => 'seeder']);
+        Comment::create(['text' => 'A nadie le importa', 'creation_date' => '2024-03-05', 'publishing_date' => '2024-03-05', 'published' => true, 'content_id' => 3, 'user_id' => 1, 'created_by' => 'seeder']);
     }
 }

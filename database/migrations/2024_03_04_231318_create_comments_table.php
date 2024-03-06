@@ -21,6 +21,10 @@ return new class extends Migration
             $table->foreign('content_id')->references('id')->on('contents')->onDelete('cascade');
             $table->unsignedInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->string('created_at', 60);
+            $table->string('updated_at', 60);
+            $table->string('created_by', 60)->nullable();
+            $table->string('updated_by', 60)->nullable();
         });
     }
 
